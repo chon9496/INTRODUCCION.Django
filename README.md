@@ -1,7 +1,15 @@
 # INTRODUCCION.Django
 
 # ⌘⥏¤┊⊰⫷⋑_》╣≜〔[0.0.Creaciones]〕≜╠《_⋐⫸⊱┊¤⥑
-
+·Pasos para poder hacer las primeras creaciones para el 
+blog tales como:
+·Ambiente
+·StartProject
+·Usuario
+·Vistas
+·.env
+·StartApp
+·
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
 
 ## Ambiente:
