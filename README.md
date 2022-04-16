@@ -1,16 +1,14 @@
 # INTRODUCCION.Django
 
 # ⌘⥏¤┊⊰⫷⋑_》╣≜〔[0.0.Creaciones]〕≜╠《_⋐⫸⊱┊¤⥑
-·Pasos para poder hacer las primeras creaciones para el 
-blog tales como:
-·Ambiente
-·StartProject
-·Usuario
-·Vistas
-·.env
-·StartApp
-·
+
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
+
+0.3.Usuario
+## Usuario:
+para crear un usuario "simple" y lo digo asi porque puedes
+crear un usuario personalizado y aprenderemos a hacer
+ambos
 
 ## StartApp:
 ·En el codigo blog viene a ser el nombre que le estamos 
