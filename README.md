@@ -32,6 +32,7 @@ dando al proyecto y si ponemos . al final se crea una
 carpeta y el manage.py; Si no lo colocamos se crea una 
 carpeta con el nombre core y dentro de ella se crea
 un archivo manage.py y una carpeta llamada core
+
 ### Requiriments:
 ·Crear un archivo llamado requiriments.txt y escribir:
     
@@ -57,7 +58,7 @@ dentro de core
 ·Despues de haber creado el proyecto ya podemos arrancar
 con python manage.py runserver pero nos dira que tenemos
 unas migraciones aparte se creara la db.sqlite3 osea la
-base de 
+base de datos
 ### Migraciones:
 
     python manage.py migrate
