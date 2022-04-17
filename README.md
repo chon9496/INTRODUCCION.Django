@@ -36,3 +36,4 @@ pero esta tendra 2 funciones una para get y otra para post
 
 ## Templates:
 tenemos que crear el blog_create.html dentro de templates        
+## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
