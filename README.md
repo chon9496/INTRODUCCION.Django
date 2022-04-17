@@ -12,7 +12,7 @@ pero esta tendra 2 funciones una para get y otra para post
 
 ## Forms:
 
-### blog/forms.py:
+#### blog/forms.py:
     from django import forms
     from .models import Post
 
@@ -20,7 +20,7 @@ pero esta tendra 2 funciones una para get y otra para post
         class Meta:
             model  = Post
             fields = ("title","content")
-### blog/views.py:
+#### blog/views.py:
     class BlogCreateView(View):
         def get(self,request,*args, **kwargs):
             context={
@@ -31,10 +31,10 @@ pero esta tendra 2 funciones una para get y otra para post
             context={
             }
             return render(request,'blog_create.html',context)
-### blog/urls.py:
+#### blog/urls.py:
     path("create/", BlogCreateView.as_view(), name="create"),
 
-## Templates:
+### Templates:
 tenemos que crear el blog_create.html dentro de templates        
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
 
@@ -88,4 +88,54 @@ del blog
             p.save()
 
             return redirect('blog:home')   
+## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
+
+## Enlistar:
+·Para ello llamamos a los post de las bases de datos para 
+ello dentro de la funcion get perteneciente a BlogListView
+·tenemos que crear tambien nuestro blog_detail.html en 
+templates
+### templates/blog_list.html:
+·tenemos que declarar un ciclo for y dentro de el colocamos
+el post.title
+·en el url que nos lleva a detail añadimos post.id porque 
+en blog/urls.py usaremos "<int:pk>/" que hace referencia al id
+
+    {% for post in posts %}
+    <a href="{% url 'blog:detail' post.id %}">{{post.title}}</a>
+    <br>
+    {% endfor %}
+    <br>
+### blog/views.py:
+·Creamos una nueva clase que sera para el detail
+
+    class BlogDetailView(View):
+        def get (self, request, *args, **kwargs):
+            context={
+                
+            }
+            return render(request,'blog_detail.html',context)
+### blog/urls.py:
+·<int:pk/> hace referencia al id que es unico el pk es el 
+privatekey ese es el id y el int es numero entero
+
+    path("<int:pk>/", BlogDetailView.as_view(), name="detail"),
+#### blog/views.py
+·Despues de esto en la funcion de la clase detail tenemos
+que agregar pk 
+·No olvidar el contexto
+
+    def get (self, request,pk,*args, **kwargs):
+        post = get_object_or_404(Post,pk=pk)
+        context={
+             'post':post    
+        }
+### templates/blog_detail.html:
+·Para poder ver el contenido que hemos seleccionado solo
+ponemos post. y luego lo que queremos mostrar
+
+    {{post.title}}
+    <br>
+    {{post.content}}
+
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
