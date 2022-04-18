@@ -2,7 +2,10 @@ este ya es el blog
 <br>
 {% for post in posts %}
 <a href="{% url 'blog:detail' post.id %}">{{post.title}}</a>
+<a href="{% url 'blog:update' post.id %}">•••ACTUALIZAR••</a>
+
 <br>
 {% endfor %}
+
 <br>
 <a href="{% url 'blog:create' %}">create</a>
