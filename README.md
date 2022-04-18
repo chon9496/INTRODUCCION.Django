@@ -137,5 +137,29 @@ ponemos post. y luego lo que queremos mostrar
     {{post.title}}
     <br>
     {{post.content}}
-
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
+
+## Editar:
+·para editar usaremos una vista especial UpdateView
+### templates:
+·Crear un archivo blog_update.html
+·Este template es igual al de crear asi que copiamos y pegamos
+
+
+    <form method="POST">
+    {% csrf_token %}
+    title{{form.title}}
+    <br>
+    content{{form.content}}
+    <button type="Submit">Update</button>  
+    </form>
+
+### blog/views.py:
+
+Creamos la clase con UpdateView y luego escogemos el modelo x
+y los campos que deseamos editar 
+
+    model  = Post
+    fields = ['title', 'content']
+## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
+
