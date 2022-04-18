@@ -161,5 +161,17 @@ y los campos que deseamos editar
 
     model  = Post
     fields = ['title', 'content']
+
+### blog/urls.py:
+·Anadimos el path paara el update
+
+    path("<int:pk>/update/", BlogUpdateView.as_view(), name="update"),
+
+### templates/blog_list.html:
+.Podriamos hacerlo dentro del detail tambien seria interesante
+tener en cuenta que esto se hace dentro del for
+  
+    <a href="{% url 'blog:update' post.id %}">•••ACTUALIZAR••</a>
+
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
 
