@@ -170,8 +170,33 @@ y los campos que deseamos editar
 ### templates/blog_list.html:
 .Podriamos hacerlo dentro del detail tambien seria interesante
 tener en cuenta que esto se hace dentro del for
-  
-    <a href="{% url 'blog:update' post.id %}">•••ACTUALIZAR••</a>
 
+    <a href="{% url 'blog:update' post.id %}">•••ACTUALIZAR••</a>
 ## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
 
+## Eliminar:
+
+### blog/views.py:
+·Trabajaremos con la vista DeleteView y creamos la clase 
+BlogDeleteView
+
+    class BlogDeleteView(DeleteView):
+        model  = Post
+        template_name ='blog_delete.html'
+        success_url = reverse_lazy('blog:home')
+### blog/urls.py:
+    path("<int:pk>/delete/", BlogDeleteView.as_view(), name="delete"),
+### templates/blog_delete.html:
+·Creamos un blog_delete.html
+tas seguro?
+
+    <form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">delete</buton>
+    </form>
+### templates/blog_list.html:
+
+    <a href="{% url 'blog:delete' post.id %}">•••ELIMINAR••</a>
+
+## ⋖⥐⋗⫷·.·⫸○⫷⫸█■¯Δ|Δ⋖_⋗》¬﹝⍨﹞⌐《⋖_⋗Δ|Δ¯■█⫷⫸○⫷·.·⫸⋖⥐⋗
