@@ -10,7 +10,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = []
-
+TAILWIND_APP_NAME = 'theme'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -18,9 +18,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog','core',
+    'blog','core','tailwind',
+    'theme',
 
 ]
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+NPM_BIN_PATH = '/usr/bin/npm'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
